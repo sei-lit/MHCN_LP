@@ -1,0 +1,399 @@
+#slideshow-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 1s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+  user-select: none;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+}
+
+#indicator {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: rgba(255, 255, 255, 1);
+}
+
+#first-view {
+  background: no-repeat center/120% url(../images/first-view.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  margin-top: 40%;
+  margin-right: 20%;
+}
+
+.logo-image {
+  position: fixed;
+  top: -110px;
+  left: -70px;
+}
+
+.logo-image img {
+  width: 30%;
+}
+
+.triangle {
+  position: absolute;
+  stroke: aliceblue;
+  stroke-width: 0.25px;
+  stroke-opacity: 0.5;
+  stroke-dasharray: round;
+}
+
+#triangle1 {
+  top: 0;
+  left: 0;
+}
+
+#triangle2 {
+  width: 100vw;
+  height: 50vh;
+  top: 50%;
+  left: 0;
+}
+
+polygon {
+  fill: rgba(255, 255, 255, 0.5); /* Change the color and opacity as needed */
+}
+
+#notification {
+  background: no-repeat center/120% url(../images/notification.png);
+  background-size: cover;
+  background-position: center;
+  font-size: 1em;
+  /* transform: translateX(20%); */
+}
+
+.notice-board {
+  width: 70%;
+  max-width: 800px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #555;
+  text-align: left;
+}
+
+.notice-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.notice-item {
+  padding: 10px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.notice-item:last-child {
+  border-bottom: none;
+}
+
+.notice-item-content {
+  color: #999;
+}
+
+#mission {
+  background: no-repeat center/120% url(../images/mission.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #eecccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.circle-text {
+  font-size: 1.2em;
+  color: #555;
+  text-align: center;
+  visibility: visible;
+  transition: visibility 0.2s, opacity 0.3s, background-color 0.3s;
+}
+
+.circle-text span {
+  font-weight: 700;
+}
+
+.circle:hover .circle-text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.circle-popup {
+  position: absolute;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0);
+  color: #555;
+  font-size: 0.6em;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s, background-color 0.3s;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* .circle-popup-top {
+  top: 0;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-popup-bottom-right {
+}
+
+.circle-popup-bottom-left {
+} */
+
+.circle:hover .circle-popup {
+  visibility: visible;
+  opacity: 1;
+  /* background-color: rgba(255, 255, 255, 0.9); */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.modal-content p {
+  font-weight: 500;
+  font-size: 0.6em;
+  color: #555;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: 100;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#curriculum {
+  background: no-repeat center/120% url(../images/curriculum.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 0.5em;
+}
+
+.content {
+  text-align: left;
+  padding: 30px 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 0.5em;
+  font-size: 2em; /* Adjust the font size as needed */
+  color: #555;
+}
+
+p {
+  margin-bottom: 1em;
+  font-size: 1em; /* Adjust the font size as needed */
+  color: #999;
+}
+
+.password-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.password-label {
+  font-size: 0.9em; /* Adjust the font size as needed */
+  color: #999;
+  margin-bottom: 0.5em;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.password-input {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1em;
+  border-radius: 0; /* Remove default border radius */
+}
+
+.password-input:focus {
+  outline: none;
+  border-bottom-color: #999; /* Change focus border color as needed */
+}
+
+.submit-button {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.5em; /* Adjust the font size of the arrow */
+  font-weight: bold;
+  color: #666;
+}
+
+.submit-button:hover {
+  color: #333; /* Change color on hover as needed */
+}
+
+.submit-button .arrow {
+  display: inline-block;
+  line-height: 1;
+}
+
+#clinical-batch {
+  background: no-repeat center/120% url(../images/clinical-batch.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.clinical-batch-contents {
+  width: 50%;
+  max-width: 800px;
+  color: #555;
+  z-index: 1;
+}
+
+.parallelogram {
+  position: absolute;
+  stroke: aliceblue;
+  stroke-width: 0.25px;
+  stroke-opacity: 0.5;
+  stroke-dasharray: round;
+}
+
+.parallelogram polygon {
+  fill: rgba(255, 255, 255, 0.75); /* Change the color and opacity as needed */
+}
+
+#re-psycho {
+  background: no-repeat center/120% url(../images/re-psycho.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.re-psycho-contents {
+  width: 50%;
+  max-width: 800px;
+  color: #555;
+  z-index: 1;
+  font-size: 0.7em;
+  backdrop-filter: blur(8px);
+  padding: 30px 50px;
+  border-radius: 24px;
+}
+
+.re-psycho-contents a {
+  color: #888;
+}
+
+#circle-support {
+  background: no-repeat center/120% url(../images/circle-support.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.circle-support-contents {
+  width: 50%;
+  max-width: 800px;
+  color: #555;
+  z-index: 1;
+  font-size: 0.7em;
+  backdrop-filter: blur(8px);
+  padding: 30px 50px;
+  border-radius: 24px;
+}

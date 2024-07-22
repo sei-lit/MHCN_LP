@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mental Health Care Network</title>
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="slideshow-container">
+      <div class="slide" id="first-view">
+        <div class="logo-image">
+          <img src="./images/logo/001.png" alt="Mental Health care Network" />
+        </div>
+        <div class="title">
+          <h3 class="animate">医療従事者支援のパイオニア</h3>
+          <h1 class="animate">メンタルヘルスケア・ネットワーク</h1>
+        </div>
+        <svg
+          class="triangle"
+          id="triangle1"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <polygon points="50,0 0,30 0,0" />
+        </svg>
+        <svg
+          class="triangle"
+          id="triangle2"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <polygon points="0,30 100,100 0,100" />
+        </svg>
+      </div>
+      <div class="slide" id="notification">
+        <div class="notice-board">
+          <div class="notice-title">お知らせ</div>
+          <div class="notice-content">
+            <div class="notice-item">
+              <p>心理専門職の学び直しを応援するプロジェクトを発動します！</p>
+              <p class="notice-item-content">2023/07/07</p>
+            </div>
+            <div class="notice-item">
+              <p>
+                新型コロナウイルス感染症の影響を鑑み、4月1日より営業を見合わせておりましたが、本日より一部業務を再開致します。詳しくはお問い合わせください。
+              </p>
+              <p class="notice-item-content">2020/06/08</p>
+            </div>
+            <!-- <div class="notice-item">
+              <p>TextTextTextTextTextTextTextText</p>
+              <p class="notice-item-content">
+                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+              </p>
+            </div>
+            <div class="notice-item">
+              <p>TextTextTextTextTextTextTextText</p>
+              <p class="notice-item-content">
+                TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+              </p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="slide" id="mission">
+        <div class="circle animate" id="circle1">
+          <div class="circle-text">Why<br /><span>ささえる</span></div>
+          <div class="circle-popup" class="circle-popup-top">
+            特に医療・福祉領域における心理的支援リソースを提供します
+          </div>
+        </div>
+        <div class="circle animate" id="circle2">
+          <div class="circle-text">What<br /><span>学ぶ</span></div>
+          <div class="circle-popup">
+            リスキリング教育をはじめ，教育・評価制度を実装します
+          </div>
+        </div>
+        <div class="circle animate" id="circle3">
+          <div class="circle-text">How<br /><span>つながる</span></div>
+          <div class="circle-popup">
+            さまざまな領域，世代をつなぐ，次世代のサービス，プラットフォームを提供します
+          </div>
+        </div>
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <span class="close" data-modal="modal1">&times;</span>
+            <p>
+              ・医療・福祉従事者支援<br />
+              医療の現場や福祉の現場において,
+              効果的な労働者支援を実現するためには, 労働者の専門性や,
+              患者様や利用者様の特性など,
+              職場の特徴にマッチした支援を行う必要があります。また,
+              何か問題が生じる前段階で, SOSをしっかりキャッチし,
+              問題や課題を解決する予防的支援を行うことも必要不可欠です。あなたの職場のメンタルヘルスケアを全面的にバックアップします。
+            </p>
+          </div>
+        </div>
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <span class="close" data-modal="modal2">&times;</span>
+            <p>
+              医療機関・福祉機関における研修をコーディネートします。研修は対面によるもの，オンラインによるもの，オンデマンドによるものなど，職場に適した方法で実施します。経験豊富な講師陣が価値ある情報を凝縮してお伝えします。まずはお問い合わせください。
+            </p>
+          </div>
+        </div>
+        <div id="modal3" class="modal">
+          <div class="modal-content">
+            <span class="close" data-modal="modal3">&times;</span>
+            <p>
+              ・認知症支援<br />
+              認知症の診断を受けたとき，軽度認知症になったとき，あなたの想いをしっかりと伝え，つなぐことが大切です。わたしたち専門家集団がオーダーメイドの評価・支援システムで万全な準備のお手伝いを致します。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="slide" id="curriculum">
+        <div class="container animate">
+          <div class="content">
+            <h2>研修</h2>
+            <p>
+              このコンテンツはパスワードで保護されています。閲覧するには以下にパスワードを入力してください。
+            </p>
+            <form class="password-form">
+              <div class="input-container">
+                <input
+                  type="password"
+                  id="password"
+                  class="password-input"
+                  placeholder="パスワード"
+                />
+                <button type="submit" class="submit-button">
+                  <span class="arrow">→</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="slide" id="clinical-batch">
+        <div class="clinical-batch-contents animate">
+          <h2>クリニカル・バッヂ</h2>
+          <p>
+            医療機関や福祉機関における労働者の評価は非常に難しく，また職種を越え，統一した評価基準を運用することは至難の業です。わたしたちMHCNでは，これまでの経験を活かし，また学術研究の成果を元に，クリニカル・バッヂ制度を開発しました。<br />
+            この制度により，労働者のモティベーションやワークエンゲイジメントなどを効果的に醸成し，あなたの職場の活気を高めます。
+          </p>
+        </div>
+        <svg
+          class="parallelogram"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <polygon points="30,0 100,0 70,100 0,100" />
+        </svg>
+      </div>
+      <div class="slide" id="re-psycho">
+        <div class="re-psycho-contents animate">
+          <h2>Re:psycho!</h2>
+          <p>
+            現役の対人援助職を対象としたリスクリング教育を行うプラットフォームです。「資格は持っているけれど，ブランクがあり自信がない」「系統的に学び直すことで知識や技能の整理をしたい」「職能を高め，キャリアアップしたい」などといった想いに応え、もっと活躍するための教育・スーパービジョン・医療機関における実習などを展開します。
+          </p>
+          <a href="https://repsycho.jp/">詳しくはこちらから→</a>
+        </div>
+      </div>
+      <div class="slide" id="circle-support">
+        <div class="circle-support-contents animate">
+          <h2>大人のサークル活動応援団</h2>
+          <p>
+            Health Education（身体的健康・精神的健康の維持増進），Financial
+            Education（金融・資産リテラシーを高める），Life and
+            Pleasure（生きることへの喜びと愉しみを）をキーワードに大人が集い，学び，つながる場所をつくります。<br />
+            大学研究所との連携によるシンクタンクの設置，場の提供からキャリア支援まで，包括的な『サークル』でより良く生きる仲間づくりを！
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="indicator">
+      <div class="dot" data-index="0"></div>
+      <div class="dot" data-index="1"></div>
+      <div class="dot" data-index="2"></div>
+      <div class="dot" data-index="3"></div>
+      <div class="dot" data-index="4"></div>
+      <div class="dot" data-index="5"></div>
+      <div class="dot" data-index="6"></div>
+    </div>
+    <script src="./js/slide.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/fade-in.js"></script>
+  </body>
+</html>
